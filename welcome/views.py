@@ -20,3 +20,6 @@ def index(request):
 
 def health(request):
     return HttpResponse(PageView.objects.count())
+
+def get_post(request):
+    return render(request,'post.html',{'post':{'title':'test','content':'test'}})
